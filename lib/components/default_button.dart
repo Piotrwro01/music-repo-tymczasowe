@@ -16,23 +16,23 @@ class DefaultButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      height: 60,
       width: double.infinity,
-      height: getProportionateScreenHeight(56),
-      child: OutlinedButton(
-        onPressed: () => press(),
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 118, 124, 134),
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: TextButton(
         style: ButtonStyle(
-          shape: MaterialStateProperty.all(RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30.0))),
-        ),
-        // color: kPrimaryColor,
-
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
-            color: Colors.white,
+          overlayColor: MaterialStateProperty.resolveWith(
+            (states) => Colors.black12,
           ),
+        ),
+        onPressed: () => press(),
+        child: Text(
+          "Dalej",
+          //style: kButtonText.copyWith(color: textColor),
         ),
       ),
     );

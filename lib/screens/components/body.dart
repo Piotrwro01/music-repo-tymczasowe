@@ -50,10 +50,25 @@ class _BodyState extends State<Body> {
                 child: Column(
                   children: [
                     Spacer(flex: 3),
-                    DefaultButton(
-                      text: "Dalej",
-                      press: () => Navigator.pushNamed(context, "/sign_in"),
-                    ),
+                    Container(
+      height: 60,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 118, 124, 134),
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: TextButton(
+        style: ButtonStyle(
+          overlayColor: MaterialStateProperty.resolveWith(
+            (states) => Colors.black12,
+          ),
+        ),
+        onPressed: () => Navigator.pushNamed(context, "/sign_in",
+        child: Text(
+          "Dalej",
+        ),
+      ),
+    );
                     Spacer(),
                   ],
                 ),
