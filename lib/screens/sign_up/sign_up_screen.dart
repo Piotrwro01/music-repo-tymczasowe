@@ -5,6 +5,12 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('MusicApp'),
+        ),
+        body: Column(
+          children: [Text("SIEMA")],
+        ));
   }
 }

@@ -19,8 +19,8 @@ class DefaultButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: getProportionateScreenHeight(56),
-      child: TextButton(
-        onPressed: () => press,
+      child: OutlinedButton(
+        onPressed: () => press(),
         style: ButtonStyle(
           shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30.0))),

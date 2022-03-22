@@ -25,7 +25,7 @@ class _BodyState extends State<Body> {
                 children: <Widget>[
                   Spacer(),
                   Text(
-                    "WITAMYLIKACJI",
+                    "WITAMY W APLIKACJI",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(25),
                       color: kPrimaryColor,
@@ -51,9 +51,8 @@ class _BodyState extends State<Body> {
                   children: [
                     Spacer(flex: 3),
                     DefaultButton(
-                      text: "alej",
-                      press: () =>
-                          Navigator.pushNamed(context, SignInScreen.routeName),
+                      text: "Dalej",
+                      press: () => Navigator.pushNamed(context, "/sign_in"),
                     ),
                     Spacer(),
                   ],
